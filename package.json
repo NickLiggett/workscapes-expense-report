@@ -1,7 +1,7 @@
 {
   "name": "expense-report",
   "version": "0.1.0",
-  "homepage": "https://NickLiggett.github.io/expense-report",
+  "homepage": "https://NickLiggett.github.io/workscapes-expense-report",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
