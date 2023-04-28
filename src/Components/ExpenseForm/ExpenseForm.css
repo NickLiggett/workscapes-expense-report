@@ -1,0 +1,89 @@
+.expense-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-family: "Roboto";
+}
+
+.date-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-top: 5vh;
+  width: 50%;
+  padding: 10px 50px 30px
+}
+
+.date-selector > div > div > div {
+  height: 30px;
+  width: 170px;
+}
+
+.date-selector-text {
+  font-size: 23px;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  width: 100%;
+  margin: 15px;
+  text-align: center;
+}
+
+.date-selector-input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 400px;
+}
+
+.crud-grid-wrapper {
+  margin-top: 5vh;
+  width: 95%;
+}
+
+.p-fileupload {
+  width: 100%;
+}
+
+.p-fileupload-buttonbar > span > input {
+  display: none;
+}
+
+.p-fileupload-buttonbar > button {
+  display: none;
+}
+
+.p-fileupload .p-fileupload-content {
+  border: 0px;
+  border-top: 1px solid rgb(200,200,200);
+  margin-bottom: 5vh
+}
+
+.upload-receipt-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  width: 60vw;
+  text-align: center;
+}
+
+.upload-receipt-text {
+  border-bottom: 1px solid rgb(200,200,200);
+  width: 40vw;
+  font-family: "Roboto";
+  font-size: 23px;
+}
+
+.file-upload .p-fileupload-buttonbar {
+  border: 0px;
+}
+
+.p-fileupload-row {
+  display: flex;
+  align-items: center;
+}
+
+.submit-button {
+  margin: 10vh
+}
