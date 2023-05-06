@@ -1,8 +1,9 @@
 import "../ExpenseForm/ExpenseForm.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { FileUpload } from "primereact/fileupload";
-import { Button } from 'primereact/button';
+import { Button } from "primereact/button";
+import { InputText } from "primereact/inputtext";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Paper } from "@mui/material";
@@ -16,21 +17,29 @@ const ExpenseForm = ({ rows, setRows, rowModesModel, setRowModesModel }) => {
     setLoading(true);
 
     setTimeout(() => {
-        setLoading(false);
+      setLoading(false);
     }, 2000);
-};
+  };
 
   return (
     <div className="expense-info">
-      <Paper className="date-selector">
-        <p className="date-selector-text">Expense Date Range</p>
-        <div className="date-selector-input-wrapper">
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DatePicker /> <p>to</p>
-            <DatePicker />
-          </LocalizationProvider>
-        </div>
-      </Paper>
+      <div className="date-and-purpose-wrapper">
+        <Paper className="date-wrapper">
+          <p className="date-selector-text">Expense Date Range</p>
+          <div className="date-selector-input-wrapper">
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DatePicker slotProps={{ textField: { size: "small" } }} /> <p>to</p>
+              <DatePicker slotProps={{ textField: { size: "small" } }} />
+            </LocalizationProvider>
+          </div>
+        </Paper>
+        <Paper className="purpose-wrapper">
+          <p className="purpose-input-text">Expense Business Purpose</p>
+          <div className="purpose-input-wrapper">
+            <InputText className="purpose-input"></InputText>
+          </div>
+        </Paper>
+      </div>
       <div className="crud-grid-wrapper">
         <FullFeaturedCrudGrid
           rows={rows}
@@ -52,7 +61,14 @@ const ExpenseForm = ({ rows, setRows, rowModesModel, setRowModesModel }) => {
           }
         />
       </Paper>
-      <Button className="submit-button" label="Submit Expense Report" icon="pi pi-check" loading={loading} loadingIcon="pi pi-spin pi-spinner" onClick={load} />
+      <Button
+        className="submit-button"
+        label="Submit Expense Report"
+        icon="pi pi-check"
+        loading={loading}
+        loadingIcon="pi pi-spin pi-spinner"
+        onClick={load}
+      />
     </div>
   );
 };

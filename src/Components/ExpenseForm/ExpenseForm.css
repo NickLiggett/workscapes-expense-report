@@ -6,25 +6,27 @@
   font-family: "Roboto";
 }
 
-.date-selector {
+.date-and-purpose-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
+  width: 80vw;
+  height: 12vh;
+  min-height: 120px;
+}
+
+.date-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  margin-top: 5vh;
-  width: 50%;
-  padding: 10px 50px 30px
-}
-
-.date-selector > div > div > div {
-  height: 30px;
-  width: 170px;
+  min-width: 510px;
+  width: 45%;
 }
 
 .date-selector-text {
   font-size: 23px;
   border-bottom: 1px solid rgb(200, 200, 200);
-  width: 100%;
+  width: 80%;
   margin: 15px;
   text-align: center;
 }
@@ -32,8 +34,39 @@
 .date-selector-input-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  min-width: 400px;
+  justify-content: space-between;
+  min-width: 500px;
+}
+
+.purpose-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  width: 45%;
+  min-width: 340px;
+}
+
+.purpose-input-paper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-top: 5vh;
+  width: 30vw;
+  padding: 10px 50px 30px;
+}
+
+.purpose-input-text {
+  font-size: 23px;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  width: 80%;
+  margin: 15px;
+  text-align: center;
+}
+
+.purpose-input {
+  height: 30px;
+  width: 170px;
 }
 
 .crud-grid-wrapper {
@@ -41,8 +74,25 @@
   width: 95%;
 }
 
+
+.upload-receipt-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  width: 500px;
+  text-align: center;
+}
+
+.upload-receipt-text {
+  border-bottom: 1px solid rgb(200, 200, 200);
+  width: 85%;
+  font-family: "Roboto";
+  font-size: 23px;
+}
+
 .p-fileupload {
-  width: 100%;
+  width: 80%;
 }
 
 .p-fileupload-buttonbar > span > input {
@@ -54,36 +104,16 @@
 }
 
 .p-fileupload .p-fileupload-content {
-  border: 0px;
-  border-top: 1px solid rgb(200,200,200);
-  margin-bottom: 5vh
-}
-
-.upload-receipt-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5vh;
-  width: 60vw;
-  text-align: center;
-}
-
-.upload-receipt-text {
-  border-bottom: 1px solid rgb(200,200,200);
-  width: 40vw;
-  font-family: "Roboto";
-  font-size: 23px;
-}
-
-.file-upload .p-fileupload-buttonbar {
-  border: 0px;
+  border-top: 1px solid rgb(200, 200, 200);
+  margin-bottom: 5vh;
 }
 
 .p-fileupload-row {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .submit-button {
-  margin: 10vh
+  margin: 10vh;
 }
