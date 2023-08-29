@@ -11,10 +11,10 @@ import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Close";
 import {
   GridRowModes,
-  DataGridPro,
   GridToolbarContainer,
   GridActionsCellItem,
 } from "@mui/x-data-grid-pro";
+import { DataGridPremium } from "@mui/x-data-grid-premium"
 
 function EditToolbar(props) {
   const { setRows, setRowModesModel } = props;
@@ -30,7 +30,7 @@ function EditToolbar(props) {
     return result;
   };
 
-  const handleClick = (rows) => {
+  const handleClick = () => {
     const id = createID();
     setRows((oldRows) => [
       ...oldRows,
@@ -180,7 +180,7 @@ export default function FullFeaturedCrudGrid({
         },
       }}
     >
-      <DataGridPro
+      <DataGridPremium
         rows={rows}
         columns={columns}
         editMode="row"
@@ -194,6 +194,13 @@ export default function FullFeaturedCrudGrid({
         }}
         slotProps={{
           toolbar: { setRows, setRowModesModel },
+        }}
+        initialState={{
+          aggregation: {
+            model: {
+              gross: 'sum',
+            },
+          },
         }}
       />
     </Box>
